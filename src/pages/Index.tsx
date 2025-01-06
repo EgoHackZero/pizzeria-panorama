@@ -6,21 +6,25 @@ const Index = () => {
       name: "Margherita",
       description: "Fresh tomatoes, mozzarella, basil, olive oil",
       price: "€9.90",
+      image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&q=80",
     },
     {
       name: "Quattro Formaggi",
       description: "Mozzarella, gorgonzola, parmesan, fontina",
       price: "€12.90",
+      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80",
     },
     {
       name: "Diavola",
       description: "Spicy salami, tomatoes, mozzarella, chili",
       price: "€11.90",
+      image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&q=80",
     },
     {
       name: "Prosciutto e Funghi",
       description: "Ham, mushrooms, tomatoes, mozzarella",
       price: "€11.90",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80",
     },
   ];
 
@@ -57,12 +61,21 @@ const Index = () => {
       <section className="section-padding bg-secondary/5">
         <div className="container">
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">Our Menu</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6">
             {pizzas.map((pizza, index) => (
-              <div key={index} className="menu-card p-6">
-                <h3 className="text-2xl font-bold mb-2 text-primary">{pizza.name}</h3>
-                <p className="text-gray-600 mb-4">{pizza.description}</p>
-                <p className="text-xl font-semibold text-secondary">{pizza.price}</p>
+              <div key={index} className="menu-card flex flex-col md:flex-row items-center gap-6 p-6">
+                <div className="w-full md:w-1/3">
+                  <img 
+                    src={pizza.image} 
+                    alt={pizza.name}
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </div>
+                <div className="w-full md:w-2/3 text-left">
+                  <h3 className="text-2xl font-bold mb-2 text-primary">{pizza.name}</h3>
+                  <p className="text-gray-600 mb-4">{pizza.description}</p>
+                  <p className="text-xl font-semibold text-secondary">{pizza.price}</p>
+                </div>
               </div>
             ))}
           </div>
