@@ -66,32 +66,33 @@ const Index = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Footer */}
-        <footer className="bg-primary text-white py-12">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5" />
-                <p>Hlavná 1, Košice 040 01, Slovakia</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                <p>+421 123 456 789</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5" />
-                <p>Mon-Sun: 11:00 - 22:00</p>
-              </div>
+      {/* Footer */}
+      <footer className="bg-primary text-white py-12">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="flex items-center gap-2">
+              <MapPin className="h-5 w-5" />
+              <p>Hlavná 1, Košice 040 01, Slovakia</p>
             </div>
-            <div className="text-center mt-8 pt-8 border-t border-white/20">
-              <p>&copy; 2024 Bella Italia Pizzeria. All rights reserved.</p>
+            <div className="flex items-center gap-2">
+              <Phone className="h-5 w-5" />
+              <p>+421 123 456 789</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="h-5 w-5" />
+              <p>Mon-Sun: 11:00 - 22:00</p>
             </div>
           </div>
-        </footer>
-      </div>
-    );
+          <div className="text-center mt-8 pt-8 border-t border-white/20">
+            <p>&copy; 2024 Bella Italia Pizzeria. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default Index;
