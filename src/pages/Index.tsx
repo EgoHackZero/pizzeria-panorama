@@ -49,7 +49,7 @@ const Index = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-up">
               Bella Italia Pizzeria
             </h1>
-            <p className="text-xl md:text-2xl animate-fade-up">
+            <p className="text-xl md:text-2xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
               Authentic Italian Experience
             </p>
           </div>
@@ -64,7 +64,7 @@ const Index = () => {
             {pizzas.map((pizza, index) => (
               <div 
                 key={index} 
-                className="menu-card flex flex-col md:flex-row items-center gap-6 p-6 opacity-0 -translate-x-full animate-[slideIn_0.5s_ease-out_forwards]"
+                className="menu-card flex flex-col md:flex-row items-center gap-6 p-6 opacity-0 animate-slide-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="w-full md:w-1/3">

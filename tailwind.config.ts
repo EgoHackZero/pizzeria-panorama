@@ -43,6 +43,7 @@ export default {
       },
       animation: {
         "fade-up": "fadeUp 0.5s ease-out forwards",
+        "slide-in": "slideIn 0.8s ease-out forwards",
       },
       keyframes: {
         fadeUp: {
