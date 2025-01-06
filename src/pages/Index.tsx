@@ -30,8 +30,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Navigation Header */}
+      <nav className="bg-primary text-white py-4 fixed w-full top-0 z-50">
+        <div className="container flex justify-between items-center">
+          <h1 className="text-2xl font-playfair font-bold">Bella Italia</h1>
+          <div className="space-x-6">
+            <a href="#menu" className="hover:text-accent transition-colors">Menu</a>
+            <a href="#about" className="hover:text-accent transition-colors">About</a>
+            <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <header className="relative h-[60vh] bg-[url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80')] bg-cover bg-center">
+      <header className="relative h-[60vh] bg-[url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80')] bg-cover bg-center mt-16">
         <div className="absolute inset-0 bg-black/50">
           <div className="container h-full flex flex-col justify-center items-center text-white">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-up">
@@ -44,21 +56,8 @@ const Index = () => {
         </div>
       </header>
 
-      {/* About Section */}
-      <section className="section-padding bg-white">
-        <div className="container max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-8 text-primary">About Us</h2>
-          <p className="text-lg text-gray-700 text-center leading-relaxed">
-            Bella Italia Pizzeria offers authentic Italian pizzas made with fresh ingredients. 
-            Located in the heart of Košice, we bring a slice of Italy to Slovakia.
-            Our passion for traditional Italian cuisine and commitment to quality make
-            every pizza a masterpiece.
-          </p>
-        </div>
-      </section>
-
       {/* Menu Section */}
-      <section className="section-padding bg-secondary/5">
+      <section id="menu" className="section-padding bg-secondary/5">
         <div className="container">
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">Our Menu</h2>
           <div className="max-w-4xl mx-auto space-y-6">
@@ -82,8 +81,21 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="section-padding bg-white">
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-8 text-primary">About Us</h2>
+          <p className="text-lg text-gray-700 text-center leading-relaxed">
+            Bella Italia Pizzeria offers authentic Italian pizzas made with fresh ingredients. 
+            Located in the heart of Košice, we bring a slice of Italy to Slovakia.
+            Our passion for traditional Italian cuisine and commitment to quality make
+            every pizza a masterpiece.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-primary text-white py-12">
+      <footer id="contact" className="bg-primary text-white py-12">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex items-center gap-2">
