@@ -62,7 +62,11 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-12 text-primary">Our Menu</h2>
           <div className="max-w-4xl mx-auto space-y-6">
             {pizzas.map((pizza, index) => (
-              <div key={index} className="menu-card flex flex-col md:flex-row items-center gap-6 p-6">
+              <div 
+                key={index} 
+                className="menu-card flex flex-col md:flex-row items-center gap-6 p-6 opacity-0 -translate-x-full animate-[slideIn_0.5s_ease-out_forwards]"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 <div className="w-full md:w-1/3">
                   <img 
                     src={pizza.image} 
